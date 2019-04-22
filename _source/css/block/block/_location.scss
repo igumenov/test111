@@ -1,0 +1,31 @@
+.location {
+	&__title {
+		font-size: 1.714em;
+		line-height: 1.417em;
+		margin-bottom: 0.692em;
+		font-weight: 700;
+	}
+	&__descr {
+		font-size: 1.429em;
+		line-height: 1.700em;
+	}
+	&__image {
+		font-size: 0;
+	}
+	&__info {
+		padding-bottom: 0.9em;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.location {
+		&__title {
+			font-size: 1em;
+			text-align: center;
+		}
+		&__descr {
+			font-size: 1em;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,134 @@
+.section {
+	position: relative;
+	&_pt {
+		padding-top: 50px;
+	}
+	&_pt100 {
+		padding-top: 100px;
+	}
+	&_pb {
+		padding-bottom: 50px;
+	}
+	&_pb100 {
+		padding-bottom: 100px;
+	}
+	&_pt15 {
+		padding-top: 4.000em;
+	}
+	&_pb15 {
+		padding-bottom: 7.143em;
+	}
+	&_full {
+		width: 100%;
+		height: 100vh;
+	}
+}
+.select-block {
+	margin-bottom: 15px;
+}
+.logo {
+	width: 12.143em;
+	position: absolute;
+	top: 2.714em;
+	left: 3.929em;
+	z-index: 2;
+	a {
+		width: 100%;
+	}
+	img {
+		width: 100%;
+	}
+	&_footer {
+		width: 9.857em;
+		position: relative;
+		top: auto;
+		left: auto;
+		a {
+			fill: #fff;
+			transition: fill $trsn;
+			&:hover {
+				fill: $color_main;
+			}
+		}
+	}
+	&_second {
+		width: 20.000em;
+		top: 0;
+		left: 0;
+		height: 7.071em;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		a {
+			width: 12.143em;
+		}
+	}
+}
+.fx {
+	display: flex;
+	&-fe {
+		display: flex;
+		align-items: flex-end;
+	}
+	&-fs {
+		display: flex;
+		align-items: flex-start;
+	}
+	&-c {
+		display: flex;
+		align-items: center;
+	}
+}
+.fs {
+	align-self: flex-start;
+}
+.fe {
+	align-self: flex-end;
+}
+.white {
+	color: #fff;
+}
+@media screen and (max-width: 1650px) {
+}
+@media screen and (max-width: 1366px) {
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+	.section {
+		&_full {
+			height: 50vh;
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.section {
+		&_pb15 {
+			padding-bottom: 0;
+		}
+		&_pt15 {
+			padding-top: 0;
+		}
+	}
+	.logo {
+	    width: 11.143em;
+	    top: 0;
+	    left: 0;
+	    height: 3.929em;
+	    padding: 0 0.857em;
+	    z-index: 7;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    background-color: #fff;
+	    &_footer {
+	    	width: 9.8em;
+	    	padding: 0;
+	    	margin-top: 0.286em;
+	    	background: transparent;
+	    }
+	}
+	.h1 {
+		font-size: 24px;
+		line-height: 34px;
+	}
+}

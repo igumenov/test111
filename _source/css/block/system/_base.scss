@@ -1,0 +1,155 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-size: $font_size;
+    margin: 0;
+    background: $color_bg;
+    color: $color_text;
+    font-weight: $font_weight;
+    font-family: $font_base;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 10px 0 15px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+
+    &:focus, &.focus {
+        outline: -webkit-focus-ring-color auto 5px;
+    }
+}
+
+a {
+    outline: none;
+    color: $color_black; 
+    text-decoration: none;
+    // transition: $transition;
+
+    &:hover, &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.color_blue {
+    color: $color_main;
+    fill: $color_main;
+}
+.color_hover {
+    &:hover {
+        color: $color_main_hover;
+        fill: $color_main_hover;
+    }
+}
+.ttu {
+    text-transform: uppercase;
+}
+.tac {
+    text-align: center;
+}
+.tal {
+    text-align: left;
+}
+.bold {
+    font-weight: 700;
+}
+.light {
+    font-weight: 300;
+}
+.h1 {
+    font-size: 2.571em;
+    line-height: 1.278em;
+    margin: 0px;
+}
+.block {
+    display: block;
+}
+
+.z1 {
+    z-index: 1;
+}
+.z2 {
+    z-index: 2;
+}
+.z3 {
+    z-index: 3;
+}
+.z4 {
+    z-index: 4;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+[role="button"] {
+    cursor: pointer;
+}
+
+.hidden_desktop {
+    display: none !important;
+}
+
+@media (max-width: 1366px) {
+    .container{
+    }
+}
+
+@media (max-width: 1023px) {
+    .container{
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        width: 100%;
+    }
+
+    .hidden_desktop {
+        display: block !important;
+    }
+
+    .hidden_mobile {
+        display: none !important;
+    }
+
+    .ta-l320 {
+        text-align: left !important;
+    }
+}

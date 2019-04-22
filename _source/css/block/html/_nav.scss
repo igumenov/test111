@@ -1,0 +1,98 @@
+.menu {
+    position: absolute;
+    right: -2px;
+    top: 0;
+    height: 100vh;
+    width: 30.000em;
+    z-index: 2;
+    padding: 2.5em 4.643em;
+    background-color: $color_main;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateX(102%);
+    transition: transform $trsn;
+    &.active {
+        transform: translateX(0);
+        .menu {
+            &__link {
+                transform: scale(1, 1);
+                opacity: 1;
+                
+            }
+        }
+        a {
+            &:hover {
+                color: $color_main_hover;
+            }
+        }
+    }
+    &__row {
+        flex: 1 1 100%;
+        &_top {
+            align-self: flex-start;
+        }
+        &_bottom {
+            align-self: flex-end;
+        }
+        &_hidden {
+            display: none;
+        }
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        transition: color $trsn;
+    }
+    &__link {
+        margin-bottom: 2.500em;
+        transform-origin: center top;
+        transform: scale(1, 0);
+        opacity: 0;
+        transition: transform $trsn .3s, opacity $trsn 0.3s;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & > a {
+            font-weight: 700;
+            font-size: 2.571em;
+        }
+        &-list {
+            list-style-type: none;
+            padding-left: 0;
+            a {
+                font-size: 0.857em;
+            }
+            li {
+                margin-bottom: 0.829em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu {
+        width: 100vw;
+        padding: 6.143em 1em 2.6em;
+        display: block;
+        &__link {
+            margin-bottom: 1.571em;
+            &-list {
+                display: none;
+            }
+            & > a {
+                font-size: 2.571em;
+            }
+        }
+        &__row {
+            &_top {
+                margin-bottom: 1.157em;
+            }
+            &_hidden {
+                display: block;
+                position: absolute;
+                bottom: 2.6em;
+                left: 2.5;
+            }
+        }
+    }
+}

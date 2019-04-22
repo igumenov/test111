@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="57" viewBox="0 0 76 57">
+	<defs>
+		<path id="oofca" d="M327.19 1693.662l9.95 17.234-9.95 17.234h-19.9l-9.95-17.234 9.95-17.234z"/>
+		<path id="oofcb" d="M292.19 1672.662l9.95 17.234-9.95 17.234h-19.9l-9.95-17.234 9.95-17.234z"/>
+	</defs>
+	<g>
+		<g opacity=".3" transform="translate(-262 -1672)">
+			<use xlink:href="#oofca"/>
+		</g>
+		<g opacity=".15" transform="translate(-262 -1672)">
+			<use xlink:href="#oofcb"/>
+		</g>
+	</g>
+</svg>

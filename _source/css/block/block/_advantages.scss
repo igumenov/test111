@@ -1,0 +1,63 @@
+.advantages {
+	padding: 5.714em 3.929em;
+	display: flex;
+	justify-content: space-between;
+}
+.advantage {
+	width: 19.286em;
+	padding: 1.429em;
+	background-color: #f78c25;
+	&__title {
+		font-size: 1.857em;
+		font-weight: 700;
+		color: #fff;
+		min-height: 2.423em;
+		line-height: 1.231em;
+	}
+	&__descr {
+		color: #fff;
+		margin-top: 1.929em;
+	}
+	&__icon {
+		height: 4.786em;
+		margin-bottom: 1.929em;
+		img {
+			width: 100%;
+		}
+		&_icon1 {
+			width: 4.571em;
+		}
+		&_icon2 {
+			width: 4.5em;
+		}
+		&_icon3 {
+			width: 4.071em;
+		}
+		&_icon4 {
+			width: 4.286em;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.advantages {
+		padding: 20px 15px;
+		flex-wrap: wrap;
+	}
+	.advantage {
+		width: 100%;
+		padding: 15px;
+		margin-bottom: 15px;
+		&__icon {
+			height: 70px;
+			margin-bottom: 15px;
+		}
+		&__title {
+			font-size: 23px;
+			min-height: 1em;
+		}
+		&__descr {
+			margin-top: 1em;
+		}
+	}
+}

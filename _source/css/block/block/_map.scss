@@ -1,0 +1,9 @@
+.map {
+	height: 50.750em;
+	width: 100%;
+}
+@media screen and (max-width: 767px) {
+	.map {
+		height: 470px;
+	}
+}

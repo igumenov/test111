@@ -1,0 +1,55 @@
+.button{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.286em;
+    font-weight: 700;
+    transition: color $trsn;
+    &_product {
+        display: flex;
+        span {
+            margin-right: 0.514em;
+        }
+        svg {
+            fill: none;
+            stroke: #000;
+            width: 2.929em;
+            height: 1.214em;
+            transition: stroke $trsn, transform $trsn;
+        }
+    }
+    &_white {
+        color: #fff;
+        svg {
+            stroke: #fff;
+        }
+    }
+    &_orange {
+        color: $color_main;
+        svg {
+            stroke: $color_main;
+        }
+    }
+    &:hover {
+        color: $color_main_hover;
+        svg {
+            stroke: $color_main_hover;
+            transform: translateX(20px);
+        }
+    }
+}
+@media screen and (max-width: 1650px) {
+    .button {
+    }
+}
+@media screen and (max-width: 1200px) {
+    .button {
+    }
+}
+@media screen and (max-width: 1023px) {
+    .button {
+    }
+}
+@media screen and (max-width: 767px) {
+    .button {
+    }
+}

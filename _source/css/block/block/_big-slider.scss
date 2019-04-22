@@ -1,0 +1,25 @@
+.big-slider {
+	&__image {
+		font-size: 0;
+	}
+	.owl {
+		&-nav {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.big-slider {
+		&__image {
+			height: 300px;
+			img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

@@ -1,0 +1,166 @@
+@mixin b64($val, $type: 'png') {
+    background-image: url('data:image/#{$type};base64,#{$val}');
+}
+
+@mixin fz($val) {
+    font-size: $val / $font_size_default + rem;
+}
+
+@mixin center() {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    margin: auto;
+}
+
+@mixin clearfix() {
+    &:before,
+        &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+$max-breakpoint: 1800;
+
+
+
+
+// This could be one of your media query breakpoint variables
+$wide-screen: "(max-width: #{$max-breakpoint}px)"; 
+
+// Function
+@function get-vw($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($max-breakpoint * .01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 1vw;
+}
+
+// Mixin
+@mixin vw($attr, $size) {
+  #{$attr}: get-vw($size);
+  @media #{$wide-screen} {
+    #{$attr}: $size;
+  }
+}
+
+//десктоп
+@mixin lg {
+    @media (min-width: 1281px) {
+        @content
+    }
+}
+
+//мелкий десктоп
+@mixin md {
+    @media (min-width: 991px) and (max-width: 1280px) {
+        @content
+    }
+}
+
+//планшет
+@mixin sm {
+    @media (min-width: 768px) and (max-width: 990px) {
+        @content
+    }
+}
+
+//телефон
+@mixin xs {
+    @media (max-width: 767px) {
+        @content
+    }
+}
+
+//медиазапрос от и до
+@mixin media($min, $max){
+    @if ($min == 0) {
+        @media (max-width: $max) {
+            @content
+        }
+    }
+    @else if ($max == 0) {
+        @media (min-width: $min) {
+            @content
+        }
+    }
+    @else {
+        @media (min-width: $min) and (max-width: $max) {
+            @content
+        }
+    }
+}
+@mixin responsive-table($thead-title...) {
+
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+    }
+
+    @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        &:nth-child(1){
+            border: none;
+        }
+    }
+    
+    tr { 
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        &:nth-child(1){
+            border: none;
+        } 
+    }
+    
+    td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 150px;
+        height: inherit;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        &:last-child{
+            padding-left: 0;
+            text-align: center;
+        }
+        
+    }
+    
+    td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 14px;
+        left: 10px;
+        width: 100%;
+        max-width: 130px;
+        padding-right: 10px; 
+        font-weight: bold;
+    }
+
+    @for $i from 1 through length($thead-title) {
+      td:nth-of-type(#{$i}):before {
+        content: nth($thead-title, $i);
+      } 
+    }
+
+}
+}
