@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="12" viewBox="0 0 8 12">
+	<defs>
+		<path id="xucla" d="M54.767 195L50 199.768l4.767 4.766"/>
+	</defs>
+	<g>
+		<g transform="translate(-48 -194)">
+			<use fill="#fff" fill-opacity="0" stroke="#fff" stroke-miterlimit="50" stroke-width="2" xlink:href="#xucla"/>
+		</g>
+	</g>
+</svg>

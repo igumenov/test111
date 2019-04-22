@@ -166,11 +166,12 @@
 			    margin-bottom: 0.3em;
 			}
 			&_before {
-				position: relative;
+				position: relative;				
+				padding-top: 2.9em;
 				&:before {
-					content: "„";
+					content: "”";
 					position: absolute;
-				    top: -0.923em;
+				    top: 0.3em;
 					left: 0;
 					opacity: 0.2;
 					font-size: 4.429em;
@@ -288,7 +289,7 @@
 				}
 				&_before {
 					&:before {
-						top: -0.79em;
+						// top: -0.79em;
 					}
 				}
 			}
